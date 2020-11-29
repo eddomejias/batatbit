@@ -117,6 +117,14 @@ main{
     margin: 0 auto;
 }
 
+.currency-table{
+    position: relative;
+}
+
+.comissions-table{
+    position: relative;
+}
+
 .main-exchange-container .backgroundImg{
     width: 200px;
     height: 200px;
@@ -128,7 +136,7 @@ main{
     background-repeat: no-repeat;
 }
 
-.main-exchange-container h2{
+.currency-table h2{
     margin-bottom: 30px;
     font-size: 2.4rem;
     font-weight: bold;
@@ -172,7 +180,239 @@ main{
 .table{
     display: grid;
     width: 100%;
-    height: 100%;
+    height: 159px;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, 1fr);
+    justify-items: center;
+    align-items: center;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: var(--gray);
+}
+
+.table div{
+    border: 1px solid var(--off-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.table .table__name{
+    padding-left: 12px;
+    justify-content: flex-start;
+    text-align: left;
+}
+
+.table .table__value{
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #757575;
+}
+
+.trading-down{
+    margin-left: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(assets/icons/trading-down.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.trading-up{
+    margin-left: 10px;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-image: url(assets/icons/trending-up.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-exchange-container .updated-date-container-currencys{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px auto 0;
+    padding:0;  
+    width: 173px;
+    height: 31px;
+
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--soft-orange);
+}
+
+.updated-date-container-currencys .bold{
+    font-weight: bold;
+    margin-right: 0.6rem;
+    color: var(--warm-black);
+}
+
+.currency-table .right-arrow{
+    position: absolute;
+    right: 31px;
+    bottom: calc(50% - 6px);
+    height: 12px;
+    width: 7.5px;
+    background-image: url("assets/icons/right-arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+
+.comissions-table .left-arrow{
+    position: absolute;
+    left: 31px;
+    bottom: calc(50% - 6px);
+    height: 12px;
+    width: 7.5px;
+    background-image: url("assets/icons/left-arrow.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+.comissions-table{
+    display: none;
+}
+
+.comissions-table h2{
+    color: var(--secondary-blue);
+} 
+
+.comissions-table .updated-date-container-currencys{
+    background-color: var(--soft-blue);
+}
+
+.main-product-detail{
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    height: auto;
+    padding: 20px 10px;
+    background-color: var(--warm-black);
+}
+
+.main-product-detail .potato-icon{
+    position: absolute;
+    width: 40px;
+    height: 25px;
+    left: calc(50% - 20px);
+    top: -10px;
+    background-image: url("assets/icons/chip-icon.svg");
+    background-size: cover;
+}
+
+.product-detail__title{
+    width: 90%;
+    min-width: 288px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.product-detail__title h2{
+    margin-bottom: 20px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    line-height: 2.6rem;
+    color: var(--white);
+}
+
+.product-detail__title p{
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #757575;
+}
+
+.product-detail-card{
+    width: 100%;
+    min-width: 288px;
+    max-width: 400px;
+    height: 150px;
+    margin: 15px auto;
+    padding: 15px;
+    background-color: var(--warm-black-one);
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.16);
+}
+
+.product-detail-card .icon-clock{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("assets/icons/clock.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-detail-card .icon-eye{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("assets/icons/eye.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-detail-card .icon-dollar{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("assets/icons/dollar.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-detail-card .icon-check{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-bottom: 10px;
+    background-image: url("assets/icons/check-circle.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.product-card__title{
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    line-height: 1.8rem;
+    color: var(--white);    
+}
+
+.product-card__body{
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 1.8rem;
+    color: #808080;
 }
